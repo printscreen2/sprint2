@@ -36,8 +36,8 @@ io.on('connection', function (socket) {
       updateRoster();
     });
 
-    socket.on('message', function (msg) {
-      var text = String(msg || '');
+    socket.on('message', function (message) {
+      var text = String(message || '');
 
       if (!text)
         return;
